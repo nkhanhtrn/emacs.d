@@ -30,6 +30,7 @@
     js2-mode
     js-comint
     tern
+    tern-auto-complete
     ; helm
     helm
     helm-gtags
@@ -71,3 +72,4 @@
 (load-library "nk-c-cpp")                      ; c/c++
 (load-library "nk-markdown")                   ; markdown
 (load-library "nk-webmode")                    ; web-mode
+(load-library "nk-javascript")                 ; JavaScript mode
