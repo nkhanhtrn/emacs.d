@@ -27,6 +27,9 @@
     elisp-slime-nav
     ; HTML/CSS/JavaScript
     web-mode
+    js2-mode
+    js-comint
+    tern
     ; helm
     helm
     helm-gtags
