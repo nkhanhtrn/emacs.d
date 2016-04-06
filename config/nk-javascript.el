@@ -2,7 +2,7 @@
 (eval-after-load 'tern
    '(progn
       (require 'tern-auto-complete)
-      (tern-ac-setup)))j
+      (tern-ac-setup)))
 
 (defun delete-tern-process ()
   (interactive)
