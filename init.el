@@ -4,9 +4,9 @@
 
 ; package manager
 (require 'package)
-(dolist (source '(("marmalade" . "http://marmalade-repo.org/packages/")
+(dolist (source '(("marmalade" . "https://marmalade-repo.org/packages/")
                   ("elpa" . "http://tromey.com/elpa/")
-                  ("melpa" . "http://melpa.milkbox.net/packages/")
+                  ("melpa" . "https://melpa.org/packages/")
                   ))
   (add-to-list 'package-archives source t))
 (package-initialize)
