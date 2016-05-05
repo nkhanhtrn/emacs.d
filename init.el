@@ -32,6 +32,8 @@
     js-comint
     tern
     tern-auto-complete
+    ; TypeScript
+    tide
     ; helm
     helm
     helm-gtags
@@ -74,3 +76,4 @@
 (load-library "nk-markdown")                   ; markdown
 (load-library "nk-webmode")                    ; web-mode
 (load-library "nk-javascript")                 ; JavaScript mode
+(load-library "nk-typescript")                 ; TypeScript mode
