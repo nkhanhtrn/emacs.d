@@ -1,10 +1,11 @@
 ; load path
 (add-to-list 'load-path "~/.emacs.d/config/")
-(setq default-directory "~/Documents/dev/")
+(setq default-directory "~/Documents/")
 
 ; package manager
 (require 'package)
-(dolist (source '(("marmalade" . "https://marmalade-repo.org/packages/")
+(dolist (source '(("gnu" . "https://elpa.gnu.org/packages/")
+                  ("marmalade" . "https://marmalade-repo.org/packages/")
                   ("elpa" . "http://tromey.com/elpa/")
                   ("melpa" . "https://melpa.org/packages/")
                   ))
