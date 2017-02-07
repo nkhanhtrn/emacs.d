@@ -1,6 +1,5 @@
 ; load path
 (add-to-list 'load-path "~/.emacs.d/config/")
-(setq default-directory "~/Documents/")
 
 ; package manager
 (require 'package)
