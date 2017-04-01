@@ -1,5 +1,6 @@
 ; load path
 (add-to-list 'load-path "~/.emacs.d/config/")
+(setq default-directory "~/dev/")
 
 ; package manager
 (require 'package)
