@@ -1,13 +1,12 @@
 ;;
 ;; PACKAGE: helm
 ;;
-;; NOTE: configuration for Helm
-
+;; Note: Show helm buffer with better list displaying
 ; require helm
 (require 'helm)
 (require 'helm-config)
 
-; global key set
+;; alter all keys to helm equivalents
 (global-set-key (kbd "C-c h") 'helm-command-prefix)            ; change helm prefix to avoid pressing C-x C-c
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-mini)
@@ -44,34 +43,14 @@
       helm-lisp-fuzzy-completion            t)
 (setq helm-autoresize-mode                  t)                 ; auto resize helm
 
+; dynamic abbreviations with Helm
+(global-set-key (kbd "C-<tab>") 'helm-dabbrev)
+(define-key minibuffer-local-map (kbd "C-<tab>") 'helm-dabbrev)
+
 ; enable helm
 (helm-mode 1)
 
-;;; helm-gtags
-(setq
- helm-gtags-ignore-case t
- helm-gtags-auto-update t
- helm-gtags-use-input-at-cursor t
- helm-gtags-pulse-at-cursor t
- helm-gtags-prefix-key "\C-cg"
- helm-gtags-suggested-key-mapping t
- )
-
-
+; helm descbing
 (require 'helm-descbinds)
 (helm-descbinds-mode)
 
-(require 'helm-gtags)
-;; Enable helm-gtags-mode
-(add-hook 'dired-mode-hook 'helm-gtags-mode)
-(add-hook 'eshell-mode-hook 'helm-gtags-mode)
-(add-hook 'c-mode-hook 'helm-gtags-mode)
-(add-hook 'c++-mode-hook 'helm-gtags-mode)
-(add-hook 'asm-mode-hook 'helm-gtags-mode)
-
-(define-key helm-gtags-mode-map (kbd "C-c g a") 'helm-gtags-tags-in-this-function)
-(define-key helm-gtags-mode-map (kbd "C-j") 'helm-gtags-select)
-(define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
-(define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)
-(define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
-(define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)

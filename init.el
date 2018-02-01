@@ -37,7 +37,6 @@
     tide
     ; helm
     helm
-    helm-gtags
     helm-projectile
     helm-descbinds
     ; snippet
@@ -64,16 +63,16 @@
     (package-install p)))
 
 ;; mode configuration
-(load-library "common")                     ; common settings
-(load-library "misc")                       ; misc plugins
-(load-library "helm")                       ; helm
-(load-library "company")                    ; company
-(load-library "smartparens")                ; smartparens
-(load-library "c-cpp")                      ; c/c++
-(load-library "markdown")                   ; markdown
-(load-library "webmode")                    ; web-mode
-(load-library "javascript")                 ; JavaScript mode
-(load-library "typescript")                 ; TypeScript mode
+(load-library "nk-common")                     ; common settings
+(load-library "nk-misc")                       ; misc plugins
+(load-library "nk-helm")                       ; helm
+(load-library "nk-company")                    ; company
+(load-library "nk-smartparens")                ; smartparens
+(load-library "nk-c-cpp")                      ; c/c++
+(load-library "nk-markdown")                   ; markdown
+(load-library "nk-webmode")                    ; web-mode
+(load-library "nk-javascript")                 ; JavaScript mode
+(load-library "nk-typescript")                 ; TypeScript mode
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -84,7 +83,7 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (solarized-theme golden-ratio rainbow-mode smooth-scrolling nyan-mode dired-rainbow dired+ dired-details+ markdown-mode lua-mode function-args yasnippet helm-descbinds helm-projectile helm-gtags helm tide tern-auto-complete tern js-comint js2-mode web-mode elisp-slime-nav ws-butler dtrt-indent clean-aindent-mode smartparens sr-speedbar company))))
+    (solarized-theme golden-ratio rainbow-mode smooth-scrolling nyan-mode dired-rainbow dired+ dired-details+ markdown-mode lua-mode function-args yasnippet helm-descbinds helm-projectile helm tide tern-auto-complete tern js-comint js2-mode web-mode elisp-slime-nav ws-butler dtrt-indent clean-aindent-mode smartparens sr-speedbar company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
