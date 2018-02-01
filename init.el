@@ -52,9 +52,9 @@
     ; Markdown
     markdown-mode
     ; Dired dired-details
-    dired-details+
-    dired+
-    dired-rainbow
+    ;dired-details+
+    ;dired+
+    ;dired-rainbow
     ; misc plugins
     nyan-mode
     smooth-scrolling
@@ -68,19 +68,18 @@
     (package-install p)))
 
 ;; mode configuration
-(load-library "nk-common")                     ; common settings
-(load-library "nk-misc")                       ; misc plugins
-(load-library "nk-helm")                       ; helm
-(load-library "nk-helm-descbinds")             ; helm-descbinds
-(load-library "nk-helm-gtags")                 ; helm-gtags
-(load-library "nk-company")                    ; company
-(load-library "nk-speedbar")                   ; sr-speedbar
-(load-library "nk-smartparens")                ; smartparens
-(load-library "nk-c-cpp")                      ; c/c++
-(load-library "nk-markdown")                   ; markdown
-(load-library "nk-webmode")                    ; web-mode
-(load-library "nk-javascript")                 ; JavaScript mode
-(load-library "nk-typescript")                 ; TypeScript mode
+(load-library "common")                     ; common settings
+(load-library "misc")                       ; misc plugins
+(load-library "helm")                       ; helm
+(load-library "helm-descbinds")             ; helm-descbinds
+(load-library "helm-gtags")                 ; helm-gtags
+(load-library "company")                    ; company
+(load-library "smartparens")                ; smartparens
+(load-library "c-cpp")                      ; c/c++
+(load-library "markdown")                   ; markdown
+(load-library "webmode")                    ; web-mode
+(load-library "javascript")                 ; JavaScript mode
+(load-library "typescript")                 ; TypeScript mode
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
