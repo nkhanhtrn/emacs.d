@@ -1,18 +1,12 @@
 ;;
 ;; PACKAGE: misc plugins
 ;;
-;; NOTE:
 
 ; PACKAGE: clean-aindent-mode
-; Usage: clear whitespace with editing code
+; Usage: clear auto-indent whitespace while editing code
 (require 'clean-aindent-mode)
-(add-hook 'prog-mode-hook 'clean-aindent-mode)
-
-; PACKAGE: dtrt-indent
-; Usage: determine where to use Tab and Space
-(require 'dtrt-indent)
-(dtrt-indent-mode 1)
-(setq dtrt-indent-verbosity 0)
+(global-set-key (kbd "RET") 'newline-and-indent)
+(set 'clean-aindent-is-simple-indent t)
 
 ; PACKAGE: ws-butler
 ; Usage: remove noisy whitespace
@@ -25,13 +19,6 @@
 (nyan-mode)
 (nyan-start-animation)
 
-; PACKAGE: smooth-scrolling
-; Usage: smooth scrolling
-(require 'smooth-scrolling)
-(setq smooth-scroll-margin 10)
-(setq scroll-conservatively 9999
-      scroll-preserve-screen-position t)
-
 ; PACKAGE: yasnippet
 ; Usage: snippet
 (require 'yasnippet)
@@ -40,4 +27,5 @@
 ; PACKAGE: golden-ratio
 ; Usage: divide buffers
 (require 'golden-ratio)
+(setq golden-ratio-auto-scale t)
 (golden-ratio-mode 1)

@@ -38,7 +38,6 @@
 ; defaults key binding
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-c w") 'whitespace-mode)
-(global-set-key (kbd "RET") 'newline-and-indent)
 
 ; set theme
 (setq custom-theme-directory "~/.emacs.d/themes/")

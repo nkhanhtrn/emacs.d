@@ -7,11 +7,8 @@
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
        (proto (if no-ssl "http" "https")))
-  ;; Comment/uncomment these two lines to enable/disable MELPA and MELPA Stable as desired
   (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
-  ;;(add-to-list 'package-archives (cons "melpa-stable" (concat proto "://stable.melpa.org/packages/")) t)
   (when (< emacs-major-version 24)
-    ;; For important compatibility libraries like cl-lib
     (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
 
@@ -57,7 +54,6 @@
     ;dired-rainbow
     ; misc plugins
     nyan-mode
-    smooth-scrolling
     rainbow-mode
     golden-ratio
     ; theme
@@ -71,8 +67,6 @@
 (load-library "common")                     ; common settings
 (load-library "misc")                       ; misc plugins
 (load-library "helm")                       ; helm
-(load-library "helm-descbinds")             ; helm-descbinds
-(load-library "helm-gtags")                 ; helm-gtags
 (load-library "company")                    ; company
 (load-library "smartparens")                ; smartparens
 (load-library "c-cpp")                      ; c/c++
@@ -80,6 +74,7 @@
 (load-library "webmode")                    ; web-mode
 (load-library "javascript")                 ; JavaScript mode
 (load-library "typescript")                 ; TypeScript mode
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
