@@ -35,8 +35,11 @@
  '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized)))))
 
-; defaults key binding
+; Advance buffer management
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+(autoload 'ibuffer "ibuffer" "List buffers." t)
+
+; show/hide whitespace
 (global-set-key (kbd "C-c w") 'whitespace-mode)
 
 ; set theme
