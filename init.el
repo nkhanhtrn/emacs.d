@@ -20,6 +20,7 @@
     ; IDE plugins
     sr-speedbar
     company
+    company-tern
     smartparens
     ; whitespace/indentation
     clean-aindent-mode
@@ -30,9 +31,10 @@
     ; HTML/CSS/JavaScript
     web-mode
     js2-mode
+    js2-refactor
+    xref-js2
     js-comint
     tern
-    tern-auto-complete
     ; TypeScript
     tide
     ; helm
@@ -83,7 +85,7 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(package-selected-packages
    (quote
-    (solarized-theme golden-ratio rainbow-mode smooth-scrolling nyan-mode dired-rainbow dired+ dired-details+ markdown-mode lua-mode function-args yasnippet helm-descbinds helm-projectile helm tide tern-auto-complete tern js-comint js2-mode web-mode elisp-slime-nav ws-butler dtrt-indent clean-aindent-mode smartparens sr-speedbar company))))
+    (xref-js2 js2-refactor company-tern solarized-theme golden-ratio rainbow-mode smooth-scrolling nyan-mode dired-rainbow dired+ dired-details+ markdown-mode lua-mode function-args yasnippet helm-descbinds helm-projectile helm tide tern-auto-complete tern js-comint js2-mode web-mode elisp-slime-nav ws-butler dtrt-indent clean-aindent-mode smartparens sr-speedbar company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
